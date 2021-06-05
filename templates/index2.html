@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="stylesheet" type="text/css" href="./static.css"/>
+<style type="text/css">
+h1
+{ color: black;
+  text-align: center;
+} 
+.header {
+  padding: 50px; 
+   /* some padding */
+  text-align: center; /* center the text */
+  background: #1CFFF1 ; /* green background */
+  color: black; /* white text color */
+}
+.header h1
+{
+    font-size: 40px;
+}
+*
+{
+margin:2px;
+box-sizing: border-box;
+}
+.footer
+{
+ height:400px;
+ background-color: black;
+ color: black;
+}
+section
+{
+padding: 20px;
+height: 700px;
+background-color: black;
+color: white;
+font-size: 20;
+text-align: justify;
+  text-justify: inter-word;
+}
+.section
+{
+height: 700px;
+background-color: black;
+color: white;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: black;
+}
+a
+        {
+        text-decoration: none;    
+        float: left;
+        padding-left: 50px;
+        padding-right: 50px;
+        margin-left: 130px;
+        font-size: 22;
+        color: black;
+        }
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  color:#43BF95;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: center;
+  display: block;
+  color: #1CFFF1  ;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.center {
+  float: center;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #40D5CC ;
+  color: black;
+  padding-right: 40px;
+  padding: 20px 30px;
+}
+.square1 {
+	position: absolute;
+	top: 360px;
+	left: 180px;
+  height: 326px;
+  width: 486px;
+  background-color:  #1C1919;
+  
+}
+.square2 {
+	position: absolute;
+	top: 360px;
+	left: 680px;
+  height: 326px;
+  width: 486px;
+  background-color:  #1C1919;
+  
+}
+
+.square4 {
+	position: absolute;
+	top: 700px;
+	left: 680px;
+	bottom:200px;
+  height: 326px;
+  width: 486px;
+  background-color:  #1C1919;
+  
+}
+
+.square3 {
+	position: absolute;
+	top: 700px;
+	left: 180px;
+	bottom: 200px;
+  height: 326px;
+  width: 486px;
+  background-color:  #1C1919;
+  
+}
+.row {  
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: row wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  background-color: black;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  border-color: black;
+}
+
+/* Main column */
+.main {   
+  flex: 70%;
+  background-color: #1C1919;
+  padding: 20px;
+  font-size: 24;
+  color: white;
+  text-align: center;
+  
+  text-justify: inter-word;
+
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 34px;
+  border: none;
+  outline: none;
+  background-color: #1CFFF1;
+  color: black;
+  cursor: pointer;
+  padding: 16px;
+  border-radius: 2px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+
+</style>
+    <title>Snoop Mask</title>
+</head>
+<body>
+<div class='header'>
+	<h1>SNOOP MASK</h1>
+</div>
+<div class= "main">
+	<form action="/" method="POST">
+<p>Camera 1: <input type="text" name="Camera Links" value="{{ num1 }}"></p>
+<p>Camera 2: <input type="text" name="Camera Links" value="{{ num2 }}"></p>
+<p>Camera 3: <input type="text" name="Camera Links" value="{{ num3 }}"></p>
+<p>Camera 4: <input type="text" name="Camera Links" value="{{ num4 }}"></p>
+
+<input type="submit" value="Detect">
+
+</form>
+
+
+</div>
+
+<div class="square1"></div>
+<div class="square2"></div>
+<div class="square3"></div>
+<div class="square4"></div>
+    <div>
+        
+        <div class="row mb-3">
+        	{% for i in range(0, data)%}
+        	{% if i == 0 %}
+            <div class="square1">
+            <img src="{{ url_for('video_feed', id=i) }}" width="100%">  
+            </div>
+            {% endif %}
+            {% if i == 1 %}
+            <div class="square2">
+            <img src="{{ url_for('video_feed', id=i) }}" width="100%">  
+            </div>
+            {% endif %}
+            {% if i == 2 %}
+            <div class="square3">
+            <img src="{{ url_for('video_feed', id=i) }}" width="100%">  
+            </div>
+            {% endif %}
+            {% if i == 3 %}
+            <div class="square4">
+            <img src="{{ url_for('video_feed', id=i) }}" width="100%">  
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+      
+    
+    
+
+    </div>
+</div>
+</body>
+</html>
