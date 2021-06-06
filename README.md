@@ -1,5 +1,5 @@
 ![Snoop Mask Logo](https://github.com/mitangshu/Snoop-Mask---Heroku/blob/main/SnoopMaskBGBlack.jpg)
-# Snoop Mask
+# **Snoop Mask**
 It is a mask detection system which can detect the number of people wearing and number of people not wearing masks in a room through real time video feed using Ip cameras. It is a custom trained tiny yolo v3 model. The Web application is created using flask where you can provide the url of Ip cameras and start surveillance of your work place, school or institution.
 
 ## Software requirements
@@ -27,7 +27,7 @@ For accessing the Ip camera input the rtsp/http link in the input field. Make su
 ```
 cv2.VideoCapture('rtsp://username:password@camera_ip_address:554/user=username_password='password'_channel=channel_number_stream=0.sdp')
 ```
-You can also use your old smartphone as Ip camera by downloading [IP Webcam] (https://play.google.com/store/apps/details?id=com.pas.webcam&) in your smartphone and click on start server this will open up your camera and the http/rtsp link will be visible to you which you can copy and paste into the input field.
+You can also use your old smartphone as Ip camera by downloading [IP Webcam!] (https://play.google.com/store/apps/details?id=com.pas.webcam&) in your smartphone and click on start server this will open up your camera and the http/rtsp link will be visible to you which you can copy and paste into the input field.
 
 The tiny yolov3 model is trained using darknet and it uses the ReadFromDarknet() present inside dnn opencv module to read and fetch the necessary weights and cfg file.
 
