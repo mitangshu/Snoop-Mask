@@ -15,6 +15,19 @@ It is a mask detection system which can detect the number of people wearing and 
 
 ## Working
 
+The Snoop Mask asks the user to provide the url of Ip camera or webcam to capture the video.
+
+### Webcam
+For accessing the webcam input the value 0 in the input field. This will allow the Videocapture() in cv2 to access the webcam of your device. 
+```
+cv2.VideoCapture(0)
+```
+### Ip Camera
+For accessing the Ip camera input the rstp/http link in the input field. Make sure the system and the Ip camera are connected through the same wireless network (i.e. Wifi).
+```
+cv2.VideoCapture('rtsp://username:password@camera_ip_address:554/user=username_password='password'_channel=channel_number_stream=0.sdp')
+```
+
 The tiny yolov3 model is trained using darknet and it uses the ReadFromDarknet() present inside dnn opencv module to read and fetch the necessary weights and cfg file.
 
 ```
