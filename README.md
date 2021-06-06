@@ -4,3 +4,12 @@ It is a mask detection system which can detect the number of people wearing and 
 
 ## Software requirements
 
+- Flask==2.0.1
+- Jinja2==3.0.1
+- numpy==1.20.3
+- opencv-python==4.2.0.32
+- Pillow-PIL==0.1.dev0
+- requests==2.22.0
+- simplejson==3.17.0
+- urllib3==1.25.7
+
