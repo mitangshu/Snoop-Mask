@@ -29,7 +29,7 @@ cv2.VideoCapture('rtsp://username:password@camera_ip_address:554/user=username_p
 ```
 You can also use your old smartphone as Ip camera by downloading [IP Webcam](https://play.google.com/store/apps/details?id=com.pas.webcam&) in your smartphone and click on start server this will open up your camera and the http/rtsp link will be visible to you which you can copy and paste into the input field.
 
-The tiny yolov3 model is trained using darknet and it uses the ReadFromDarknet() present inside dnn opencv module to read and fetch the network architecture of necessary weights and cfg file.
+The tiny yolov3 model is trained using darknet and it uses the ReadFromDarknet() present inside dnn opencv module to read and fetch the network architecture of necessary weights and cfg file. 
 
 ```
 cv2.dnn.readNetFromDarknet("yolov3-tiny_masks.cfg","yolov3-tiny_masks_best.weights")
@@ -41,4 +41,8 @@ To run the server open command line and navigate to the project folder and run.
 ```
 python app.py
 ```
-the model is applied over the frames of 
+this will provide you with a link which you need to open in a web browser.
+```
+Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+```
+
