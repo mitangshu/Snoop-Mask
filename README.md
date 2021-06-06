@@ -48,4 +48,4 @@ Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 
 ## Web Page
 ![Input](https://github.com/mitangshu/Snoop-Mask---Heroku/blob/main/SMinput.png)
-
+![Display](https://github.com/mitangshu/Snoop-Mask---Heroku/blob/main/SMdisplay.png)
